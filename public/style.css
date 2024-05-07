@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter';
+    display: grid;
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+section#content {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+div#chat {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 60px;
+    min-height: 70vh;
+    margin-bottom: 60px;
+}
+
+div.message {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+div.name {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+div.text {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+img.avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+div#actions{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    border: 0.5px solid rgba(204, 198, 198, 0.25);
+    background-color: #FBFAFA;
+    border-radius: 10px;
+    padding: 16px;
+    font-family: 'Inter';
+    font-size: 16px;
+    resize: none;
+}
+
+div.button {
+    padding: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.typing-loader{
+    width: 6px;
+    height: 6px;
+    -webkit-animation: line 1s linear infinite alternate;
+   -moz-animation: line 1s linear infinite alternate;
+   animation: line 1s linear infinite alternate;
+}
+@-webkit-keyframes line{
+    0%{
+       
+        background-color: rgba(0,0,0, 1);
+        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2), 
+                    24px 0px 0px 0px rgba(0,0,0,0.2);
+                    
+      }
+    25%{ 
+            background-color: rgba(0,0,0, 0.4);
+            box-shadow: 12px 0px 0px 0px rgba(0,0,0,2), 
+                    24px 0px 0px 0px rgba(0,0,0,0.2);
+                    
+    }
+    75%{ background-color: rgba(0,0,0, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2), 
+                    24px 0px 0px 0px rgba(0,0,0,2);
+                   
+      }
+}
+
+@-moz-keyframes line{
+    0%{
+       
+        background-color: rgba(0,0,0, 1);
+        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2), 
+                    24px 0px 0px 0px rgba(0,0,0,0.2);
+                    
+      }
+    25%{ 
+            background-color: rgba(0,0,0, 0.4);
+            box-shadow: 12px 0px 0px 0px rgba(0,0,0,2), 
+                    24px 0px 0px 0px rgba(0,0,0,0.2);
+                    
+    }
+    75%{ background-color: rgba(0,0,0, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2), 
+                    24px 0px 0px 0px rgba(0,0,0,2);
+                   
+      }
+}
+
+@keyframes line{
+    0%{
+       
+        background-color: rgba(0,0,0, 1);
+        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2), 
+                    24px 0px 0px 0px rgba(0,0,0,0.2);
+                    
+      }
+    25%{ 
+            background-color: rgba(0,0,0, 0.4);
+            box-shadow: 12px 0px 0px 0px rgba(0,0,0,2), 
+                    24px 0px 0px 0px rgba(0,0,0,0.2);
+                    
+    }
+    75%{ background-color: rgba(0,0,0, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(0,0,0,0.2), 
+                    24px 0px 0px 0px rgba(0,0,0,2);
+                   
+      }
+}

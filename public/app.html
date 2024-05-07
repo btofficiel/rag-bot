@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>RAG-Man</title>
+        <link rel="stylesheet" href="public/style.css"/>
+        <script src="public/js/app.js"></script>
+    </head>
+    <body>
+        <script>
+            // Init Elm
+            var app = Elm.Main.init();
+                // Create WebSocket instance
+            const socket = new WebSocket('ws://localhost:8000/bot'); // Change the URL accordingly
+
+            // Listen for messages
+            socket.addEventListener('message', function (event) {
+                app.ports.messageReceiver.send(event.data);
+            });
+
+            // Connection closed
+            socket.addEventListener('close', function (event) {
+                app.ports.messageReceiver.send("Connection dropped. Please reload");
+            });
+
+            // Connection error
+            socket.addEventListener('error', function (event) {
+                app.ports.messageReceiver.send("Connection dropped. Please reload");
+            });
+
+            // Send query
+            app.ports.askQuery.subscribe(function(query) {
+                if (socket.readyState === WebSocket.OPEN) {
+                    socket.send(query);
+                } else {
+                    app.ports.messageReceiver.send("Connection dropped. Please reload");
+                }
+            });
+
+        </script>
+    </body>
+</html>
+
