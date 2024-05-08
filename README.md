@@ -12,7 +12,7 @@ We first need to install the correct version of python. One of the ways to do th
 ```
 PYTHON_CONFIGURE_OPTS="--enable-framework" pyenv install 3.11.8
 ```
-Once we python installed we can create and activate our python virtual environment using
+Once we have python installed, we can create and activate our python virtual environment using
 ```
 python -m venv venv
 source venv/bin/activate
@@ -25,7 +25,7 @@ We use Ollama to manage LLMs locally and it can be installed using the [installe
 ```
 ollama pull llama3:instruct
 ```
-(Optional) We have our UI built using Elm and the compiled JS is already in the public/js folder. In case you wan to tinker with the Elm code base, then you can build client code using the below command after you have installed [Elm](https://guide.elm-lang.org/install/elm.html)
+(Optional) We have our UI built using Elm and the compiled JS is already in the public/js folder. In case you want to tinker with the Elm code base, then you can build client code using the below command after you have installed [Elm](https://guide.elm-lang.org/install/elm.html)
 ```
 cd client
 bash build.sh
