@@ -35,10 +35,9 @@ Make sure that you have the python virtual environment activated and then run fo
 ```
 fastapi dev main.py
 ```
-### Screenshot
-<img width="1710" alt="image" src="https://github.com/btofficiel/rag-bot/assets/23034603/8788036c-8440-4562-a508-1b73a0021a26">
-
 Once you see the line mentioned below in the console, head to [localhost:8000](http://localhost:8000) and start using the chatbot
 ```
 INFO:     Application startup complete.
 ```
+### Screenshot
+<img width="1710" alt="image" src="https://github.com/btofficiel/rag-bot/assets/23034603/8788036c-8440-4562-a508-1b73a0021a26">
