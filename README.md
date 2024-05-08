@@ -1,8 +1,8 @@
 # RAG based chatbot
 ## Setup and execution
 ### Videos
-*  [Demo]()
-*  [Architecture and code walkthorugh]()
+*  [Demo](https://www.youtube.com/watch?v=FSou2DPo714)
+*  [Architecture and code walkthorugh](https://www.youtube.com/watch?v=x5BxEr4s5_E)
 
 ### Description
 This project aims to develop an interactive chat-based system leveraging the RAG (Retrieve, Aggregate, Generate) methodology to process data from demonstration indices. The system will allow users to interact with the data in a conversational manner.
