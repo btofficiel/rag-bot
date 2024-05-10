@@ -24,11 +24,15 @@ async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     try:
         while True:
+            raise Exception("Error here")
             raw_query = await websocket.receive_text()
             response = rag(raw_query)
             await websocket.send_text(response.answer)
     except WebSocketDisconnect:
         logger.info("Client disconnected")
+    except Exception as e:
+        logger.error("An unexpected exception occurred", exc_info=True)
+        await websocket.send_text("Some error occurred on the server, try reloading")
 
 # Setup web app
 @app.get("/")
